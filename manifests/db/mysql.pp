@@ -108,9 +108,9 @@ class openstack::db::mysql (
       'ssl_ca'        => $mysql_ca,
       'ssl_cert'      => $mysql_cert,
       'ssl_key'       => $mysql_key,
+      'datadir'       => $mysql_datadir,
     },
     enabled     => $enabled,
-    datadir     => $mysql_datadir,
   }
 
   # This removes default users and guest access
