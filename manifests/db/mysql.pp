@@ -96,6 +96,7 @@ class openstack::db::mysql (
     $allowed_hosts          = false,
     $charset                = 'latin1',
     $enabled                = true,
+    $manage_service         = true,
     $mysql_datadir          = undef,
 ) {
 
@@ -110,7 +111,8 @@ class openstack::db::mysql (
       'ssl_key'       => $mysql_key,
       'datadir'       => $mysql_datadir,
     },
-    enabled     => $enabled,
+    enabled         => $enabled,
+    manage_service  => $manage_service,
   }
 
   # This removes default users and guest access
